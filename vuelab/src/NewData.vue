@@ -1,6 +1,9 @@
 <template>
-<div>
+<!-- <div>
     <h1> {{ greet }} {{ nameG }}</h1>
+</div> -->
+<div>
+    <h1 v-bind:class="!agotado && 'Agotado'">Agotado</h1>
 </div>
 </template>
 
@@ -11,6 +14,7 @@ export default {
         return{
     greet: "Hola",
     nameG: "Cinta",
+    agotado: true,
     }
     }
 
@@ -18,5 +22,7 @@ export default {
 </script>
 
 <style>
-
+.Agotado{
+    display: none;
+}
 </style>
